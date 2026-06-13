@@ -10,9 +10,9 @@ package {
 }
 
 apex_key {
-    name: "com.libremobileos.microg.key",
-    public_key: "com.libremobileos.microg.avbpubkey",
-    private_key: "com.libremobileos.microg.pem",
+    name: "com.frosty.microg.key",
+    public_key: "com.frosty.microg.avbpubkey",
+    private_key: "com.frosty.microg.pem",
 }
 
 android_app_import {
@@ -35,7 +35,7 @@ android_app_import {
     ],
     apex_available: [
         "//apex_available:platform",
-        "com.libremobileos.microg",
+        "com.frosty.microg",
     ],
 }
 
@@ -51,7 +51,7 @@ android_app_import {
     ],
     apex_available: [
         "//apex_available:platform",
-        "com.libremobileos.microg",
+        "com.frosty.microg",
     ],
 }
 
@@ -62,16 +62,16 @@ android_app_import {
     presigned: true,
     apex_available: [
         "//apex_available:platform",
-        "com.libremobileos.microg",
+        "com.frosty.microg",
     ],
 }
 
 apex {
-    name: "com.libremobileos.microg",
+    name: "com.frosty.microg",
     defaults: ["u-launched-apex-module"],
     manifest: "manifest.json",
     apps: ["GmsCoreMicrog", "FakeStore", "GsfProxy"],
-    overrides: [ "com.libremobileos.microg-stub" ],
+    overrides: [ "com.frosty.microg-stub" ],
     prebuilts: [
         "microg.xml",
         "default-permissions-com.android.vending.xml",
@@ -80,17 +80,17 @@ apex {
         "privapp-permissions-com.google.android.gms.xml",
         "sysconfig-com.google.android.gms.xml"
     ],
-    key: "com.libremobileos.microg.key",
+    key: "com.frosty.microg.key",
     certificate: ":microg.certificate",
     compressible: false,
     updatable: true,
 }
 
 apex {
-    name: "com.libremobileos.microg-stub",
+    name: "com.frosty.microg-stub",
     defaults: ["u-launched-apex-module"],
     manifest: "manifest-stub.json",
-    key: "com.libremobileos.microg.key",
+    key: "com.frosty.microg.key",
     certificate: ":microg.certificate",
     compressible: false,
     updatable: true,
