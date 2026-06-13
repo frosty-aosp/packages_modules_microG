@@ -18,7 +18,7 @@ apex_key {
 android_app_import {
     name: "GmsCoreMicrog",
     owner: "microg",
-    apk: "GmsCore/com.google.android.gms.apk",
+    apk: "GmsCore/GmsCore.apk",
     presigned: true,
     privileged: true,
     uses_libs: ["com.android.location.provider"],
@@ -42,7 +42,7 @@ android_app_import {
 android_app_import {
     name: "FakeStore",
     owner: "microg",
-    apk: "GmsCore/com.android.vending.apk",
+    apk: "FakeStore/FakeStore.apk",
     presigned: true,
     privileged: true,
     required: [
